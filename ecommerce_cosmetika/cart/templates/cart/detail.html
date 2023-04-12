@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Carrito de compras</h1>
+    {% for item in cart %}
+        <div class="cart-item">
+            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+            <h2>{{ item.product.name }}</h2>
+            <form action="{% url 'cart:cart_update' item.product.id %}" method="post">
+                {% csrf_token %}
+                {{ form.quantity }}
+                <input type="submit" value="Actualizar">
+                <input type="hidden" name="update" value="True">
+            </form>
+            <p>${{ item.total_price }}</p>
+            <a href="{% url 'cart:cart_remove' item.product.id %}">Eliminar</a>
+        </div>
+    {% endfor %}
+    <p>Total: ${{ cart.get_total_price }}</p>
+{% endblock %}
+

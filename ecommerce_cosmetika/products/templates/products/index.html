@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Productos</h1>
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="product">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description|truncatechars:100 }}</p>
+                <p>${{ product.price }}</p>
+            </div>
+	    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+             {% csrf_token %}
+             {{ form.quantity }}
+             <input type="submit" value="Añadir al carrito">
+            </form>
+        {% endfor %}
+    </div>
+{% endblock %}
+
