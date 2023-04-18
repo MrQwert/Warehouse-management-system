@@ -19,7 +19,7 @@ To install the system, simply run the following command in the terminal:
 ```sh
 docker run -p 5000:5000 jcb/ewms_pgpi
 ```
-El sistema requiere al menos 1 GB de RAM para funcionar.
+The system requires at least 1 GB of RAM to function.
 
 ## Usage:
 Once the container is running, access `localhost:5000/admin` to configure the system.
