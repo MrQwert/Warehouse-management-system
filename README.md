@@ -37,7 +37,7 @@ If you encounter any bugs or have a feature request, please do so through the is
 For technical support, simply ask through the issues section of this public repository.
 
 ## License and Terms of Use:
-Este proyecto está bajo la Licencia BSD 3-Clause.
+This project is licensed under the BSD 3-Clause License.
 
 ## Future plans:
 The project has many pending features to be developed. Anyone is welcome to contribute to the project and take it to the next level.
