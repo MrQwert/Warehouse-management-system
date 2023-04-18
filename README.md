@@ -21,6 +21,8 @@ docker run -p 5000:5000 jcb/ewms_pgpi
 ```
 The system requires at least 1 GB of RAM to function.
 
+You can check an online demo here: http://132.145.141.5:8000/es/catalogue/
+
 ## Usage:
 Once the container is running, access `localhost:5000/admin` to configure the system.
 
