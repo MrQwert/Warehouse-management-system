@@ -10,7 +10,7 @@ location = lambda x: os.path.join(
 
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '132.145.141.5'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '132.145.141.5','tandbsolutions.tech'])
 
 EMAIL_SUBJECT_PREFIX = '[Costmetika] '
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -143,7 +143,7 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -304,7 +304,7 @@ INSTALLED_APPS = [
 
     # 3rd-party apps that the sandbox depends on
     'django_extensions',
-    'debug_toolbar',
+    #'debug_toolbar',
     'carga',
 ]
 
@@ -432,3 +432,4 @@ try:
     from settings_local import *
 except ImportError:
     pass
+
